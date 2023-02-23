@@ -18,6 +18,8 @@
 <br />
 
 ## Turbostart 🚀
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsmonist%2Fcraft-vite-starter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsmonist%2Fcraft-vite-starter?ref=badge_shield)
+
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
@@ -73,3 +75,7 @@ To use Critical CSS, you need to manually add the pages that should be pre-rende
 
 This repository is based on the official [Craft CMS 4 starter template](https://github.com/craftcms/craft).  
 Thanks to Andrew Welch for the great [craft-vite plugin](https://github.com/nystudio107/craft-vite)!
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsmonist%2Fcraft-vite-starter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsmonist%2Fcraft-vite-starter?ref=badge_large)
