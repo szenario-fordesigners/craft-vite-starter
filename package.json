@@ -18,19 +18,20 @@
 	},
 	"homepage": "https://github.com/szenario-fordesigners/craft-vite-starter/#readme",
 	"devDependencies": {
+        "autoprefixer": "^10.4.14",
+		"postcss": "^8.4.21",
 		"prettier": "2.8.4",
 		"regenerator-runtime": "^0.13.11",
 		"rimraf": "^4.4.0",
 		"rollup-plugin-critical": "^1.0.12",
-		"sass": "^1.59.3",
+        "tailwindcss": "^3.2.7",
 		"terser": "^5.16.6",
 		"typescript": "^5.0.2",
 		"vite": "^4.2.0",
 		"vite-plugin-compression": "^0.5.1",
 		"vite-plugin-live-reload": "^3.0.2",
 		"vite-plugin-windicss": "^1.8.10",
-		"@vitejs/plugin-legacy": "^4.0.2",
-		"windicss":  "^3.5.6"
+		"@vitejs/plugin-legacy": "^4.0.2"
 	},
 	"dependencies": {
 	}
