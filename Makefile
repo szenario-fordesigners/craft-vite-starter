@@ -11,7 +11,7 @@ install:
 	cp patches/config.node.yaml .ddev/config.node.yaml
 
 # remove default .gitignore entries from ddev. we want our ptaches to be tracked by git
-	sed -i '/config.*.y*ml/d' .ddev/.gitignore
+	sed -i '' '/config.*.y*ml/d' .ddev/.gitignore
 	
 	@echo "cleaning project..."
 	rm -rf patches .all-contributorsrc header.png szenario-logo.svg Makefile renovate.json
