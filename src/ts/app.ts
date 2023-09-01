@@ -1,3 +1,2 @@
-import 'virtual:windi.css'
-import "@/css/main.scss";
-import "@/css/index.scss";
+import "@/css/main.css";
+import "@/css/index.css";

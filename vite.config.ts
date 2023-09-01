@@ -3,7 +3,6 @@ import legacy from "@vitejs/plugin-legacy";
 import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
 import viteCompression from "vite-plugin-compression";
-import WindiCSS from 'vite-plugin-windicss';
 import * as path from 'path';
 
 // https://vitejs.dev/config/
@@ -34,7 +33,6 @@ export default defineConfig(({ command, mode }) => {
 			port: 3000,
 		},
 		plugins: [
-			WindiCSS(),
 			liveReload(["./templates/**/*"]),
 			legacy({
 				targets: ["defaults", "ie >= 11"],
