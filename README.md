@@ -2,7 +2,7 @@
 <div align="center"><strong>What if tooling was done with 1 command?</strong></div>
 
 <img alt="craft-vite" src="header.png"/>
-<div align="center"><strong>Craft CMS 4 infused with Vite, TypeScript and WindiCSS.</strong></div>
+<div align="center"><strong>Craft CMS 4 infused with Vite, TypeScript and Tailwind CSS.</strong></div>
 <div align="center">Lightning fast development, HMR and a production ready build process.</div>
 
 <br />
@@ -22,14 +22,14 @@
 ## Turbostart 🚀
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
+bash <(curl -s https://raw.githubusercontent.com/szenario-fordesigners/craft-vite-starter/feature-tailwind/init.sh)
 ```
 
 ## Quickstart
 
 1.  `mkdir my-project && cd my-project`
 2.  `ddev config --project-type=craftcms --docroot=web --create-docroot`
-3.  `ddev composer create -y szenario-fordesigners/craft-vite-starter`
+3.  `ddev composer create -y szenario-fordesigners/craft-vite-starter:dev-feature-tailwind`
 4.  `make install`
 5.  `make dev`
 
@@ -39,7 +39,7 @@ bash <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main
 - [🚢 **DDEV**](https://github.com/drud/ddev)
 - [📦 **Vite**](https://github.com/vitejs/vite)
 - [🔒 **TypeScript**](https://github.com/microsoft/TypeScript)
-- [💨 **WindiCSS**](https://github.com/windicss/windicss)
+- [💨 **Tailwind CSS**](https://tailwindcss.com/)
 
 ## Requirements
 
