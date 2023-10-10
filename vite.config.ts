@@ -4,6 +4,7 @@ import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
 import viteCompression from "vite-plugin-compression";
 import WindiCSS from 'vite-plugin-windicss';
+import {ViteFaviconsPlugin} from "vite-plugin-favicon2";
 import * as path from 'path';
 
 // https://vitejs.dev/config/
@@ -48,6 +49,11 @@ export default defineConfig(({ command, mode }) => {
 					extract: true,
 				},
 			}),
+			ViteFaviconsPlugin({
+				logo: "./src/img/favicon-src.png",
+				inject: false,
+				outputPath: 'favicons',
+			}),
 			viteCompression(),
 		],
 		resolve: {
@@ -55,6 +61,6 @@ export default defineConfig(({ command, mode }) => {
 				'@': path.resolve(__dirname, './src')
 			},
 			preserveSymlinks: true,
-		},
+		}
 	}
 })
