@@ -15,7 +15,6 @@ export default defineConfig(({ command, mode }) => {
 	// no sanity checks here. when PRIMARY_SITE_URL is missing, something is wrong.
 	const primarySiteUrl = env.PRIMARY_SITE_URL.charAt(env.PRIMARY_SITE_URL.length - 1) === "/" ? env.PRIMARY_SITE_URL.slice(0, env.PRIMARY_SITE_URL.length - 1) : env.PRIMARY_SITE_URL;
 
-
 	return {
 		base: command === "serve" ? "" : "/dist/",
 		build: {
@@ -52,10 +51,10 @@ export default defineConfig(({ command, mode }) => {
 			viteCompression(),
 		],
 		resolve: {
-            alias: {
-              '@': path.resolve(__dirname, './src')
-            },
-            preserveSymlinks: true,
-        },
+			alias: {
+				'@': path.resolve(__dirname, './src')
+			},
+			preserveSymlinks: true,
+		},
 	}
-  })
+})
