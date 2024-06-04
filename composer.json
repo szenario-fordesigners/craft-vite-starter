@@ -17,6 +17,8 @@
     "docs": "https://github.com/szenario-fordesigners/craft-vite-starter#readme",
     "rss": "https://craftcms.com/changelog.rss"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "craftcms/cms": "^5.1.8",
     "nystudio107/craft-vite": "^5.0.0",
@@ -39,7 +41,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.0.2"
+      "php": "8.2"
     }
   }
 }
