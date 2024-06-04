@@ -2,7 +2,7 @@
 <div align="center"><strong>What if tooling was done with 1 command?</strong></div>
 
 <img alt="craft-vite" src="header.png"/>
-<div align="center"><strong>Craft CMS 4 infused with Vite, TypeScript and WindiCSS.</strong></div>
+<div align="center"><strong>Craft CMS 5 infused with Vite, TypeScript and WindiCSS.</strong></div>
 <div align="center">Lightning fast development, HMR and a production ready build process.</div>
 
 <br />
@@ -35,7 +35,7 @@ bash <(curl -s https://raw.githubusercontent.com/szenario-fordesigners/craft-vit
 
 ## Tech Stack
 
-- [🔥 **Craft CMS 4**](https://github.com/craftcms/cms)
+- [🔥 **Craft CMS 5**](https://github.com/craftcms/cms)
 - [🚢 **DDEV**](https://github.com/drud/ddev)
 - [📦 **Vite**](https://github.com/vitejs/vite)
 - [🔒 **TypeScript**](https://github.com/microsoft/TypeScript)
@@ -69,7 +69,7 @@ To use Critical CSS, you need to manually add the pages that should be pre-rende
 
 ## Credits
 
-This repository is based on the official [Craft CMS 4 starter template](https://github.com/craftcms/craft).  
+This repository is based on the official [Craft CMS starter template](https://github.com/craftcms/craft).  
 Thanks to Andrew Welch for the great [craft-vite plugin](https://github.com/nystudio107/craft-vite)!
 
 
