@@ -4,6 +4,7 @@ import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
 import viteCompression from "vite-plugin-compression";
 import WindiCSS from 'vite-plugin-windicss';
+import {ViteFaviconsPlugin} from "vite-plugin-favicon2";
 import * as path from 'path';
 
 // https://vitejs.dev/config/
@@ -14,7 +15,6 @@ export default defineConfig(({ command, mode }) => {
 
 	// no sanity checks here. when PRIMARY_SITE_URL is missing, something is wrong.
 	const primarySiteUrl = env.PRIMARY_SITE_URL.charAt(env.PRIMARY_SITE_URL.length - 1) === "/" ? env.PRIMARY_SITE_URL.slice(0, env.PRIMARY_SITE_URL.length - 1) : env.PRIMARY_SITE_URL;
-
 
 	return {
 		base: command === "serve" ? "" : "/dist/",
@@ -49,13 +49,18 @@ export default defineConfig(({ command, mode }) => {
 					extract: true,
 				},
 			}),
+			ViteFaviconsPlugin({
+				logo: "./src/img/favicon-src.png",
+				inject: false,
+				outputPath: 'favicons',
+			}),
 			viteCompression(),
 		],
 		resolve: {
-            alias: {
-              '@': path.resolve(__dirname, './src')
-            },
-            preserveSymlinks: true,
-        },
+			alias: {
+				'@': path.resolve(__dirname, './src')
+			},
+			preserveSymlinks: true,
+		}
 	}
-  })
+})
