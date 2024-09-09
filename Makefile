@@ -22,6 +22,7 @@ install:
 	ddev craft install \
 		$(filter-out $@,$(MAKECMDGOALS))
 	ddev craft plugin/install vite
+	ddev craft plugin/install ckeditor
 	@echo "ready for takeoff 🎉🎉🎉"
 	@echo "type 'make dev' to  run vite development server"
 up:
