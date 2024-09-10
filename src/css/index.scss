@@ -20,7 +20,7 @@
 body {
 	font-family: "Poppins", sans-serif;
 	background-color: #f7f7f7; /* Light background */
-	
+
 	background: radial-gradient(
 		circle,
 		rgba(255, 255, 255, 1) 0%,
@@ -51,8 +51,8 @@ body {
 	position: absolute;
 	top: -10px;
 	right: -50px;
-	width: 700px;
-	height: 700px;
+	width: 70vh;
+	height: 70vh;
 	border-radius: 50%;
 	filter: blur(80px);
 	z-index: 1;
@@ -61,12 +61,17 @@ body {
 	transition:
 		--x 0.5s,
 		--y 0.5s;
-	background: conic-gradient(from 45deg at var(--x) var(--y), red, blue, red);
+	background: conic-gradient(
+		from 45deg at var(--x) var(--y),
+		#e5422b,
+		#184cef,
+		#e5422b
+	);
 }
 
 .hovered {
 	--x: 50%;
-	--y: 80%;
+	--y: 90%;
 }
 
 /* Float animation for background shape */
@@ -157,5 +162,26 @@ p {
 	100% {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+.dark-theme {
+	background: radial-gradient(circle, #1e1e1e 0%, #3c3c3c 48%) !important;
+
+	h1 {
+		color: #ffffff !important;
+	}
+
+	p {
+		color: #ffffff !important;
+	}
+
+	.background-shape {
+		background: conic-gradient(
+			from 45deg at var(--x) var(--y),
+			#e5422b,
+			white,
+			#184cef
+		);
 	}
 }
