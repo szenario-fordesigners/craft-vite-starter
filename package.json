@@ -1,7 +1,7 @@
 {
 	"name": "craft-ddev",
 	"version": "1.0.0",
-	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
+	"description": "Craft CMS 5 + DDEV + Vite Blueprint",
 	"main": "vite.config.js",
 	"type": "module",
 	"scripts": {
