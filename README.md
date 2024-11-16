@@ -33,7 +33,7 @@ Craft is a self-hosted PHP application. It can connect to MySQL and PostgreSQL f
 - **[Documentation](https://craftcms.com/docs/)** — Read the official docs.
 - **[Knowledge Base](https://craftcms.com/knowledge-base)** — Find answers to common problems.
 - **[Newsletter](https://craftcms.com/newsletter/subscribe)** — Get official news and community updates.
-- **[Dot All](https://craftcms.com/events)** — Attend our annual conference.
+- **[Events](https://craftcms.com/events)** — Upcoming community events.
 
 ### Community
 
