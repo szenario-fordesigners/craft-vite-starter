@@ -23,14 +23,20 @@ You can learn more about it at [craftcms.com](https://craftcms.com), and documen
 
 Craft is a self-hosted PHP application. It can connect to MySQL and PostgreSQL for content storage. See [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) for more details.
 
-## Popular Resources
+## Resources
 
-- **[Tutorial](https://craftcms.com/docs/getting-started-tutorial/)** – Get set up and learn the basics.
-- **[Documentation](https://craftcms.com/docs/)** – Read the official docs.
-- **[Knowledge Base](https://craftcms.com/knowledge-base)** – Find answers to common problems.
-- **[#craftcms](https://twitter.com/hashtag/craftcms)** – See the latest tweets about Craft.
-- **[Discord](https://craftcms.com/discord)** – Meet the community.
-- **[Stack Exchange](http://craftcms.stackexchange.com/)** – Get help and help others.
-- **[CraftQuest](https://craftquest.io/)** – Watch unlimited video lessons and courses.
-- **[Craft Link List](http://craftlinklist.com/)** – Stay in-the-know.
-- **[nystudio107 Blog](https://nystudio107.com/blog)** – Learn Craft and modern web development.
+### Official
+
+- **[Website](https://craftcms.com)** — Welcome to Craft!
+- **[Tutorial](https://craftcms.com/docs/getting-started-tutorial/)** — Build a blog with step-by-step instructions.
+- **[Installation](https://craftcms.com/docs/5.x/install.html)** — Jump right in with Composer.
+- **[Documentation](https://craftcms.com/docs/)** — Read the official docs.
+- **[Knowledge Base](https://craftcms.com/knowledge-base)** — Find answers to common problems.
+- **[Newsletter](https://craftcms.com/newsletter/subscribe)** — Get official news and community updates.
+- **[Dot All](https://craftcms.com/events)** — Attend our annual conference.
+
+### Community
+
+- **[Discord](https://craftcms.com/discord)** — Meet the community.
+- **[Stack Exchange](http://craftcms.stackexchange.com/)** — Get help and help others.
+- **[CraftQuest](https://craftquest.io/)** — Watch unlimited video lessons and courses.
