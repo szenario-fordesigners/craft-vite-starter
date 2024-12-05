@@ -1,24 +1,26 @@
 {% extends "_layout" %}
 
 {% block content %}
- <div class="container">
-    <div class="content">
-        <h1>Welcome to <span>Craft CMS 5</span></h1>
-        <p>Your journey to seamless content management starts here.</p>
-        <a href="{{ cpUrl('') }}" class="btn">Enter the Control Panel</a>
-    </div>
-</div>
-<div class="background-shape"></div>
+	<div class="container">
+		<div class="content">
+			<h1>Welcome to
+				<span>Craft CMS 5</span>
+			</h1>
+			<p>Your journey to seamless content management starts here.</p>
+			<a href="{{ cpUrl('') }}" class="btn">Enter the Control Panel</a>
+		</div>
+	</div>
+	<div class="background-shape"></div>
 
-<script>
-    document.querySelector('.btn').addEventListener('mouseenter', function() {
-        document.querySelector('.background-shape').classList.add('hovered');
-        this.style.transform = 'translateY(-7px)';
-    });
+	<script>
+		document.querySelector('.btn').addEventListener('mouseenter', function () {
+document.querySelector('.background-shape').classList.add('hovered');
+this.style.transform = 'translateY(-7px)';
+});
 
-    document.querySelector('.btn').addEventListener('mouseleave', function() {
-        document.querySelector('.background-shape').classList.remove('hovered');
-        this.style.transform = 'translateY(0)';
-    });
-</script>
+document.querySelector('.btn').addEventListener('mouseleave', function () {
+document.querySelector('.background-shape').classList.remove('hovered');
+this.style.transform = 'translateY(0)';
+});
+	</script>
 {% endblock %}
