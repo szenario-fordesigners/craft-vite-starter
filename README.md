@@ -28,7 +28,7 @@ bash <(curl -s https://raw.githubusercontent.com/szenario-fordesigners/craft-vit
 ## Quickstart
 
 1.  `mkdir my-project && cd my-project`
-2.  `ddev config --project-type=craftcms --docroot=web --create-docroot`
+2.  `ddev config --project-type=craftcms --docroot=web`
 3.  `ddev composer create -y szenario-fordesigners/craft-vite-starter`
 4.  `make install`
 5.  `make dev`
