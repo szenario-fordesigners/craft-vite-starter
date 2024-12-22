@@ -1,10 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
+   "config:recommended",
     ":dependencyDashboard",
     ":pinVersions",
-    ":automergePr"
+    ":automergePr",
+    "group:allNonMajor"
   ],
   "forkProcessing": "enabled",
   "ignorePaths": ["patches/docker-compose.vite.yaml"],
