@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["@nuxtjs", ":dependencyDashboard"],
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard"
+  ],
   "forkProcessing": "enabled",
   "ignorePaths": ["patches/docker-compose.vite.yaml"],
   "schedule": ["before 2am on saturday"]
