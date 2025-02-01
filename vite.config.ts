@@ -32,6 +32,10 @@ export default defineConfig(({ command, mode }) => {
 			origin: `${primarySiteUrl}:3000`,
 			host: "0.0.0.0",
 			port: 3000,
+			cors: {
+				origin: /^https?:\/\/(?:[a-zA-Z0-9-]+\.)+ddev\.site(?::\d+)?$/,
+			},
+			allowedHosts: [".ddev.site"],
 		},
 		plugins: [
 			WindiCSS(),
