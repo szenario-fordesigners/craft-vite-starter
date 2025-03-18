@@ -2,10 +2,31 @@
 /**
  * Redirection Rules
  *
- * [TODO: Short description about how they are triggered on 404s]
+ * Rules returned in this array are evaluated only after Craft would ordinarily
+ * throw a 404 exception. They can be key-value pairs representing “from”
+ * and “to” URIs…
  *
- * Read all about Craft’s redirection behavior, here:
- * https://craftcms.com/docs/5.x/system/routing.html#redirection
+ * ```php
+ * return [
+ *     'old/path' => 'new/path',
+ * ];
+ * ```
+ *
+ * …or a nested array with `from`, `to`, `caseSensitive`, and `statusCode` keys:
+ *
+ * ```php
+ * return [
+ *     [
+ *         'from' => 'Helpdesk.aspx',
+ *         'to' => 'account/tickets',
+ *         'caseSensitive' => true,
+ *         'statusCode' => 301,
+ *     ],
+ * ];
+ * ```
+ *
+ * Read all about Craft’s redirection behavior and capabilities, here:
+ * @link https://craftcms.com/docs/5.x/system/routing.html#redirection
  */
 
 return [
