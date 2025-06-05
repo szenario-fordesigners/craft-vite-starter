@@ -17,6 +17,6 @@ done
 
 cd $folder_name
 ddev config --project-type=craftcms --docroot=web
-ddev composer create -y szenario-fordesigners/craft-vite-starter
+ddev composer create-project -y szenario-fordesigners/craft-vite-starter
 make install
 sleep 2 && ddev launch & ddev yarn dev

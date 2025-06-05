@@ -43,12 +43,12 @@ bash <(curl -s https://raw.githubusercontent.com/szenario-fordesigners/craft-vit
 
 ## Requirements
 
-- DDEV
-- Unix-based OS (MacOS, Linux)
+- [DDEV](https://github.com/drud/ddev)
+- Unix-based OS (MacOS, Linux, WSL2)
 
 ### If you are on Windows
 
-Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/) is a great starting point.
+Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/#windows) is a great starting point.
 
 ## Commands
 
