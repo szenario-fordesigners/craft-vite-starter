@@ -15,6 +15,7 @@ install:
 	mv Makefile.default Makefile
 	ddev restart
 	ddev yarn install
+	mv .env.example.dev .env
 	ddev craft setup/app-id \
 		$(filter-out $@,$(MAKECMDGOALS))
 	ddev craft setup/security-key \
