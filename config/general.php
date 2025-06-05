@@ -25,4 +25,10 @@ return GeneralConfig::create()
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
     ])
+
+    ->maxRevisions(10)
+    ->sanitizeCpImageUploads(false)
+    ->upscaleImages(false)
+    ->limitAutoSlugsToAscii(true)
+    ->convertFilenamesToAscii(true)
 ;
