@@ -27,7 +27,6 @@ return GeneralConfig::create()
     ])
 
     ->maxRevisions(10)
-    ->sanitizeCpImageUploads(false)
     ->upscaleImages(false)
     ->limitAutoSlugsToAscii(true)
     ->convertFilenamesToAscii(true)
