@@ -3,6 +3,9 @@
  * Shared bootstrap file
  */
 
+// Set the error reporting level
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
 // Define path constants
 define('CRAFT_BASE_PATH', __DIR__);
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
