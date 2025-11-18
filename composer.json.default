@@ -15,10 +15,7 @@
       "yiisoft/yii2-composer": true
     },
     "sort-packages": true,
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "8.2"
-    }
+    "optimize-autoloader": true
   },
   "scripts": {
     "post-root-package-install": [
