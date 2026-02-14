@@ -22,7 +22,7 @@
 	},
 	"homepage": "https://github.com/szenario-fordesigners/craft-vite-starter/#readme",
 	"devDependencies": {
-		"@types/node": "24.10.12",
+		"@types/node": "24.10.13",
 		"@zackad/prettier-plugin-twig": "0.16.3",
 		"prettier": "3.8.1",
 		"regenerator-runtime": "0.14.1",
