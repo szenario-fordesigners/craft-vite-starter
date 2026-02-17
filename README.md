@@ -2,15 +2,15 @@
 <div align="center"><strong>What if tooling was done with 1 command?</strong></div>
 
 <img alt="craft-vite" src="header.png"/>
-<div align="center"><strong>Craft CMS 5 infused with Vite, TypeScript and WindiCSS.</strong></div>
+<div align="center"><strong>Craft CMS 5 infused with Vite, TypeScript and tailwindcss.</strong></div>
 <div align="center">Lightning fast development, HMR and a production ready build process.</div>
 
 <br />
 <div align="center">
   <sub>Made possible by</sub>
   <sub><br />
-  <a href="https://szenario.design/" target="_blank">
-    <img src="szenario-logo.svg" style="width:140px;" alt="szenario.design logo" /></a>
+  <a href="https://www.szenario-design.com/" target="_blank">
+    <img src="szenario-logo.svg" style="width:140px;" alt="szenario-design.com logo" /></a>
   </sub><br /><br />
   <sub>The team behind the magic</sub><br />
   <sub><a href="https://twitter.com/smonist">Simon Wesp</a></sub>
@@ -35,15 +35,15 @@ bash <(curl -s https://raw.githubusercontent.com/szenario-fordesigners/craft-vit
 
 ## Tech Stack
 
-- [🔥 **Craft CMS 5**](https://github.com/craftcms/cms)
-- [🚢 **DDEV**](https://github.com/drud/ddev)
-- [📦 **Vite**](https://github.com/vitejs/vite)
-- [🔒 **TypeScript**](https://github.com/microsoft/TypeScript)
-- [💨 **WindiCSS**](https://github.com/windicss/windicss)
+- [🔥 **Craft CMS 5**](https://craftcms.com/)
+- [🚢 **DDEV**](https://ddev.com/)
+- [📦 **Vite**](https://vite.dev/)
+- [🔒 **TypeScript**](https://www.typescriptlang.org/)
+- [💨 **tailwindcss**](https://tailwindcss.com/)
 
 ## Requirements
 
-- [DDEV](https://github.com/drud/ddev)
+- [DDEV](https://ddev.com/)
 - Unix-based OS (MacOS, Linux, WSL2)
 
 ### If you are on Windows
@@ -60,12 +60,11 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 
 - `ddev yarn` - for managing frontend packages
 - `ddev composer` - for managing backend packages
-- `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/#craft)
+- `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/stable/users/usage/commands/#craft)
 
 ### Critical CSS
 
 To use Critical CSS, you need to manually add the pages that should be pre-rendered to the `criticalPages` array in `vite.config.ts`. The pages will be pre-rendered when building and the generated CSS will be inlined in the HTML.
-
 
 ## Credits
 
