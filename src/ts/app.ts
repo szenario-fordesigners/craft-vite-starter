@@ -1,2 +1,2 @@
-import 'virtual:windi.css'
+import "@/css/tailwind.css";
 import "@/css/main.scss";
