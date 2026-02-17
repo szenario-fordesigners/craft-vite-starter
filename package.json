@@ -22,11 +22,11 @@
 	},
 	"homepage": "https://github.com/szenario-fordesigners/craft-vite-starter/#readme",
 	"devDependencies": {
-		"@types/node": "24.10.12",
+		"@types/node": "24.10.13",
 		"@zackad/prettier-plugin-twig": "0.16.3",
 		"prettier": "3.8.1",
 		"regenerator-runtime": "0.14.1",
-		"rimraf": "6.1.2",
+		"rimraf": "6.1.3",
 		"rollup-plugin-critical": "1.0.15",
 		"sass-embedded": "1.97.3",
 		"terser": "5.46.0",
