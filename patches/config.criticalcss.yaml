@@ -1,5 +1,5 @@
 webimage_extra_packages:
-    [chromium, fonts-liberation, libnss3, libgtk-3-0, libasound2, xdg-utils]
+    [chromium]
 
 web_environment:
     - CPPFLAGS=-DPNG_ARM_NEON_OPT=0
