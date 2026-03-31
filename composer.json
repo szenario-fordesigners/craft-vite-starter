@@ -17,8 +17,6 @@
     "docs": "https://github.com/szenario-fordesigners/craft-vite-starter#readme",
     "rss": "https://craftcms.com/changelog.rss"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "require": {
     "craftcms/ckeditor": "4.11.0",
     "craftcms/cms": "^5.9.10",
