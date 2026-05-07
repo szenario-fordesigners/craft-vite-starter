@@ -14,6 +14,7 @@ install:
 	@echo "cleaning project..."
 	rm -rf patches .all-contributorsrc header.png init.sh Makefile patches renovate.json szenario-logo.svg
 	mv Makefile.default Makefile
+	mv .env.example.dev .env
 	ddev restart
 	ddev yarn install
 	ddev craft setup/app-id \
