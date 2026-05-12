@@ -10,6 +10,8 @@
   "forkProcessing": "enabled",
   "ignorePaths": ["patches/docker-compose.vite.yaml"],
   "schedule": ["before 2am on saturday"],
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
   "packageRules": [
     {
       "matchPackageNames": ["node"],
