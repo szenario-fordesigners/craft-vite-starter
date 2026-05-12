@@ -1,5 +1,5 @@
 {
-	"name": "craft-ddev",
+	"name": "craft-vite-starter",
 	"version": "1.0.0",
 	"description": "Craft CMS 5 + DDEV + Vite Blueprint",
 	"main": "vite.config.js",
