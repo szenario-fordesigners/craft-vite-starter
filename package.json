@@ -13,7 +13,7 @@
 		"url": "git+https://github.com/szenario-fordesigners/craft-vite-starter/.git"
 	},
 	"author": "@szenario-fordesigners, @smonist, @thomasbendl",
-	"license": "ISC",
+	"license": "0BSD",
 	"engines": {
 		"node": ">=24.0.0"
 	},
