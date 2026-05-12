@@ -1,8 +1,7 @@
 {
 	"name": "craft-vite-starter",
-	"version": "1.0.0",
+	"version": "2.4.3",
 	"description": "Craft CMS 5 + DDEV + Vite Blueprint",
-	"main": "vite.config.js",
 	"type": "module",
 	"scripts": {
 		"dev": "rimraf ./web/dist && node viteDevServerToggle.js 1 && vite --host",
