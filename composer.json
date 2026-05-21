@@ -31,6 +31,9 @@
       "craftcms/plugin-installer": true,
       "yiisoft/yii2-composer": true
     },
+    "audit": {
+      "block-insecure": false
+    },
     "sort-packages": true,
     "optimize-autoloader": true
   },
