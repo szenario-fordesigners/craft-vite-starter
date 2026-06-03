@@ -23,7 +23,7 @@ make install
 read -p "Install Craft-specific Claude agent skills? (https://github.com/michtio/craftcms-claude-skills) [y/N] " install_skills
 case "$install_skills" in
   [yY][eE][sS]|[yY])
-    ddev yarn dlx skills add michtio/craftcms-claude-skills
+    ddev npx skills add michtio/craftcms-claude-skills
     ;;
 esac
 
