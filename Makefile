@@ -10,7 +10,8 @@ install:
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
 	cp patches/config.node.yaml .ddev/config.node.yaml
 	cp patches/config.php.yaml .ddev/config.php.yaml
-	
+	cp patches/config.mutagen.yaml .ddev/config.mutagen.yaml
+
 	@echo "cleaning project..."
 	rm -rf patches .all-contributorsrc header.png init.sh Makefile patches renovate.json szenario-logo.svg
 	mv Makefile.default Makefile
