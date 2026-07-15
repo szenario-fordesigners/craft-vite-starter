@@ -17,7 +17,7 @@ done
 
 cd $folder_name
 ddev config --project-type=craftcms --docroot=web
-ddev composer create-project -y szenario-fordesigners/craft-vite-starter
+ddev composer create-project -n szenario-fordesigners/craft-vite-starter
 make install
 
 read -p "Install Craft-specific Claude agent skills? (https://github.com/michtio/craftcms-claude-skills) [y/N] " install_skills
