@@ -1,5 +1,6 @@
 {
 	"useTabs": true,
 	"tabWidth": 4,
-	"plugins": ["@zackad/prettier-plugin-twig"]
+	"twigSingleQuote": false,
+	"plugins": ["@destination/prettier-plugin-twig"]
 }

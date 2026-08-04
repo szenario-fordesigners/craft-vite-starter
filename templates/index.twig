@@ -3,7 +3,8 @@
 {% block content %}
 	<div class="container">
 		<div class="content">
-			<h1>Welcome to
+			<h1>
+				Welcome to
 				<span>Craft CMS 5</span>
 			</h1>
 			<p>Your journey to seamless content management starts here.</p>
@@ -14,13 +15,13 @@
 
 	<script>
 		document.querySelector('.btn').addEventListener('mouseenter', function () {
-document.querySelector('.background-shape').classList.add('hovered');
-this.style.transform = 'translateY(-7px)';
-});
+			document.querySelector('.background-shape').classList.add('hovered');
+			this.style.transform = 'translateY(-7px)';
+		});
 
-document.querySelector('.btn').addEventListener('mouseleave', function () {
-document.querySelector('.background-shape').classList.remove('hovered');
-this.style.transform = 'translateY(0)';
-});
+		document.querySelector('.btn').addEventListener('mouseleave', function () {
+			document.querySelector('.background-shape').classList.remove('hovered');
+			this.style.transform = 'translateY(0)';
+		});
 	</script>
 {% endblock %}
