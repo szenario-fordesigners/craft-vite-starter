@@ -30,16 +30,13 @@
 		"@tailwindcss/vite": "4.3.3",
 		"@destination/prettier-plugin-twig": "3.0.1",
 		"prettier": "3.9.6",
-		"regenerator-runtime": "0.14.1",
 		"rimraf": "6.1.3",
 		"rollup-plugin-critical": "1.0.18",
 		"sass-embedded": "1.100.0",
 		"tailwindcss": "4.3.3",
-		"terser": "5.49.0",
 		"typescript": "7.0.2",
 		"vite": "8.1.5",
-		"vite-plugin-live-reload": "3.1.0",
-		"@vitejs/plugin-legacy": "8.2.2"
+		"vite-plugin-live-reload": "3.1.0"
 	},
 	"dependencies": {}
 }

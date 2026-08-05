@@ -1,5 +1,4 @@
 import { defineConfig, loadEnv } from "vite";
-import legacy from "@vitejs/plugin-legacy";
 import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
 import tailwindcss from '@tailwindcss/vite';
@@ -39,10 +38,6 @@ export default defineConfig(({ command, mode }) => {
 		plugins: [
 			tailwindcss(),
 			liveReload(["./templates/**/*"]),
-			legacy({
-				targets: ["defaults", "ie >= 11"],
-				additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
-			}),
 			critical({
 				criticalUrl: primarySiteUrl,
 				criticalBase: "./web/dist/criticalcss/",
