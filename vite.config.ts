@@ -2,7 +2,6 @@ import { defineConfig, loadEnv } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
-import viteCompression from "vite-plugin-compression";
 import tailwindcss from '@tailwindcss/vite';
 import * as path from 'path';
 
@@ -53,7 +52,6 @@ export default defineConfig(({ command, mode }) => {
 					extract: true,
 				},
 			}),
-			viteCompression(),
 		],
 		resolve: {
             alias: {
