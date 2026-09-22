@@ -6,7 +6,8 @@ dev: up
 	ddev yarn dev
 install:
 	@echo "applying patches..."
-	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
+	mkdir -p .ddev/nginx
+	cp patches/nginx/vite-dev.conf .ddev/nginx/vite-dev.conf
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
 	cp patches/config.node.yaml .ddev/config.node.yaml
 	cp patches/config.php.yaml .ddev/config.php.yaml

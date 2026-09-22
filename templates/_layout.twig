@@ -5,7 +5,7 @@
 		<title>{{ siteName }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{{ craft.vite.includeCriticalCssTags() }}
-		{{ craft.vite.script("src/ts/app.ts") }}
+		{{ craft.vite.script("src/ts/app.ts", false) }}
 	</head>
 	<body class="">
 		{% block content %}{% endblock %}

@@ -1,4 +1,4 @@
-.PHONY: build dev up
+.PHONY: build dev up share
 
 build:
 	ddev yarn build
@@ -8,6 +8,21 @@ up:
 	if [ ! "$$(ddev describe | grep OK)" ]; then \
 		ddev start; \
     fi
+# Craft renders absolute .ddev.site URLs a tunnel visitor can't reach, so nginx
+# strips that origin from HTML. The hostname is written fresh on every run
+# (sub_filter can't match on a variable), which keeps it right after a rename.
+# Restarts ddev only when the file actually changed.
+share: up
+	@url=$$(ddev exec printenv PRIMARY_SITE_URL | tr -d '\r' | sed 's|/$$||'); \
+	conf=.ddev/nginx/share-relative-urls.conf; \
+	new="sub_filter '$$url' '';\nsub_filter_once off;"; \
+	if [ "$$(cat $$conf 2>/dev/null)" != "$$(printf "$$new")" ]; then \
+		mkdir -p .ddev/nginx; printf "$$new\n" > $$conf; ddev restart; \
+	fi
+	@# ponytail: pkill because stopping the docker exec client leaves vite running in the container
+	@trap 'ddev exec pkill -f vite >/dev/null 2>&1' EXIT; \
+	ddev yarn dev & \
+	ddev share
 %:
 	@:
 # ref: https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line

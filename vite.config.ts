@@ -15,7 +15,9 @@ export default defineConfig(({ command, mode }) => {
 
 
 	return {
-		base: command === "serve" ? "" : "/dist/",
+		// in dev, nginx proxies /vite-dev/ to this server (.ddev/nginx/vite-dev.conf),
+		// so everything stays on the site's origin and survives `ddev share`.
+		base: command === "serve" ? "/vite-dev/" : "/dist/",
 		build: {
 			emptyOutDir: true,
 			manifest: true,
@@ -27,13 +29,11 @@ export default defineConfig(({ command, mode }) => {
 			},
 		},
 		server: {
-			origin: `${primarySiteUrl}:3000`,
 			host: "0.0.0.0",
 			port: 3000,
-			cors: {
-				origin: /^https?:\/\/(?:[a-zA-Z0-9-]+\.)+ddev\.site(?::\d+)?$/,
-			},
-			allowedHosts: [".ddev.site"],
+			// ponytail: hardcoded 443 because the proxy lands on https. drop the
+			// clientPort if you ever serve the site over plain http.
+			hmr: { clientPort: 443 },
 		},
 		plugins: [
 			tailwindcss(),

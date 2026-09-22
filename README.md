@@ -55,6 +55,7 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 - `make install` - patches the DDEV craft config and installs Craft CMS. Should only be used as a first time setup.
 - `make dev` - starts the development server
 - `make build` - bundles the assets for production
+- `make share` - starts the development server and a public `ddev share` tunnel with working HMR. ngrok by default; for no account, run `ddev config global --share-default-provider=cloudflared` once
 
 ## Subsequent Use
 
