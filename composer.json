@@ -19,7 +19,7 @@
   },
   "require": {
     "craftcms/ckeditor": "5.7.0",
-    "craftcms/cms": "5.11.1",
+    "craftcms/cms": "5.11.3",
     "nystudio107/craft-vite": "5.0.2",
     "vlucas/phpdotenv": "5.7.0"
   },
