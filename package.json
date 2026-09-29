@@ -4,9 +4,8 @@
 	"description": "Craft CMS 5 + DDEV + Vite Blueprint",
 	"type": "module",
 	"scripts": {
-		"predev": "rimraf ./web/dist && node viteDevServerToggle.js 1",
 		"dev": " vite --host",
-		"prebuild": "node viteDevServerToggle.js 0 && tsc",
+		"prebuild": "tsc",
 		"build": "vite build",
 		"type-check": "tsc --noEmit",
 		"format": "prettier --write .",
@@ -30,7 +29,6 @@
 		"@tailwindcss/vite": "4.3.3",
 		"@destination/prettier-plugin-twig": "3.1.0",
 		"prettier": "3.9.8",
-		"rimraf": "6.1.3",
 		"sass-embedded": "1.104.1",
 		"tailwindcss": "4.3.3",
 		"typescript": "7.0.2",
