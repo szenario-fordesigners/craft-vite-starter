@@ -63,10 +63,6 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 - `ddev composer` - for managing backend packages
 - `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/stable/users/usage/commands/#craft)
 
-### Critical CSS
-
-To use Critical CSS, you need to manually add the pages that should be pre-rendered to the `criticalPages` array in `vite.config.ts`. The pages will be pre-rendered when building and the generated CSS will be inlined in the HTML.
-
 ### Responsive Images
 
 This starter kit comes with named AVIF and WebP image transforms (`avif480` … `avif3840`, `webp480` … `webp3840`, no upscaling). Render every image through the component, which builds the `srcset` from them:

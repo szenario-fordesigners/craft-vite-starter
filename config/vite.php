@@ -14,7 +14,5 @@ return [
     'devServerInternal' => '',
     'checkDevServer' => false,
     'includeReactRefreshShim' => false,
-    'includeModulePreloadShim' => true,
-    'criticalPath' => '@webroot/dist/criticalcss',
-    'criticalSuffix' =>'_critical.min.css',
+    'includeModulePreloadShim' => false,
 ];
