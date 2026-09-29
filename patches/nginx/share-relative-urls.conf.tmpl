@@ -1,0 +1,8 @@
+# Template: `make share` fills in the origin and writes share-relative-urls.conf.
+# Skip the CP: rewriting there breaks hashed inputs (e.g. the Save button's `redirect`).
+set $share_url_from '__PRIMARY_SITE_URL__';
+if ($request_uri ~ ^/admin(/|\?|$)) {
+    set $share_url_from '__no_share_rewrite__';
+}
+sub_filter $share_url_from '';
+sub_filter_once off;

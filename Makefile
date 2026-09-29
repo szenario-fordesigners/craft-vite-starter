@@ -8,6 +8,7 @@ install:
 	@echo "applying patches..."
 	mkdir -p .ddev/nginx
 	cp patches/nginx/vite-dev.conf .ddev/nginx/vite-dev.conf
+	cp patches/nginx/share-relative-urls.conf.tmpl .ddev/nginx/share-relative-urls.conf.tmpl
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
 	cp patches/config.node.yaml .ddev/config.node.yaml
 	cp patches/config.php.yaml .ddev/config.php.yaml
