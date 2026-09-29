@@ -14,7 +14,7 @@ install:
 	cp patches/config.mutagen.yaml .ddev/config.mutagen.yaml
 
 	@echo "cleaning project..."
-	rm -rf patches .all-contributorsrc header.png init.sh Makefile patches renovate.json szenario-logo.svg
+	rm -rf .all-contributorsrc header.png init.sh Makefile renovate.json szenario-logo.svg
 	mv Makefile.default Makefile
 	mv .env.example.dev .env
 	ddev restart
@@ -27,6 +27,13 @@ install:
 		$(filter-out $@,$(MAKECMDGOALS))
 	ddev craft plugin/install vite
 	ddev craft plugin/install ckeditor
+	@echo "adding image transforms..."
+	@# craft install wipes config/project, so the transforms are copied in afterwards
+	cp -R patches/imageTransforms config/project/imageTransforms
+	ddev craft project-config/apply
+	@# apply doesn't write the transform names back to project.yaml, leaving a pending diff
+	ddev craft project-config/write
+	rm -rf patches
 	@echo "ready for takeoff 🎉🎉🎉"
 	@echo "type 'make dev' to  run vite development server"
 up:

@@ -12,3 +12,13 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
+// lazyish (passive mode) fade-in for non-priority images from _includes/components/image.twig.
+// Scoped to scripting so images stay visible when JS is off.
+@media (scripting: enabled) {
+	.lazyload {
+		transition: opacity 0.3s;
+	}
+	.lazyload:not(.lazyloaded, .lazyerror) {
+		opacity: 0;
+	}
+}

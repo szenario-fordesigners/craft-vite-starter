@@ -1,0 +1,84 @@
+{#
+	Responsive image: AVIF + WebP srcset built from the named avif*/webp* transforms.
+
+	{% include "_includes/components/image.twig" with { asset: entry.image.one() } only %}
+
+	- asset (required): Craft asset. Renders nothing unless asset.kind == "image".
+	- sizes (default "100vw"): set it for every slot narrower than the viewport,
+	e.g. "(min-width: 768px) 50vw, 100vw".
+	- priority (default false): true for the LCP / above-the-fold image.
+	Eager, fetchpriority="high", no lazyish fade-in.
+	- class: extra classes on the <img>.
+	- alt: overrides asset.alt.
+	- coverHeight: CSS height of an object-fit: cover slot that can be taller than the
+	image's aspect ratio (e.g. "100dvh"). Widens sizes to
+	max(<sizes>, calc(<coverHeight> * <width/height>)).
+	ponytail: only for a single-length sizes ("100vw", "50vw"). A media-condition
+	list can't be wrapped in max(), so widen each entry by hand if you need that.
+
+	<picture> is display: contents, so `class` lands on the real layout box (the <img>).
+	Trade-off: in a grid/flex parent the <img> becomes the grid/flex item and stretches,
+	so wrap the include in a <div> there.
+
+	Full-size version (lightbox, download, zoom): asset.getUrl("webp3840") with
+	asset.getWidth("webp3840") / asset.getHeight("webp3840"). Don't copy the width list.
+#}
+{% if (asset.kind ?? null) == "image" %}
+	{% set alt = alt ?? asset.alt %}
+	{% set sizes = sizes ?? "100vw" %}
+	{% set priority = priority ?? false %}
+	{%
+		set imgAttr = {
+			class: [priority ? null : "lazyload", class ?? null]|filter,
+			style: asset.hasFocalPoint ? "object-position: #{asset.getFocalPoint(true)}" : null,
+		}
+	%}
+
+	{% if asset.mimeType == "image/svg+xml" %}
+		{# Craft can't transform SVGs: every handle would return the original URL. #}
+		<img
+			src="{{ asset.url }}"
+			width="{{ asset.width }}"
+			height="{{ asset.height }}"
+			alt="{{ alt }}"
+			{{ attr(imgAttr) }}
+			loading='{{ priority ? "eager" : "lazy" }}'
+			fetchpriority='{{ priority ? "high" : "auto" }}'
+		>
+	{% else %}
+		{% if coverHeight ?? null %}
+			{% set sizes = "max(#{sizes}, calc(#{coverHeight} * #{(asset.width / asset.height)|round(3)}))" %}
+		{% endif %}
+
+		{#
+			Transforms have upscale: false, so drop steps wider than the source and label
+			the 3840 transform with its real output width.
+		#}
+		{% set widths = [480, 800, 1200, 1600, 2000, 2400]|filter(w => w <= asset.width) %}
+		{% set transforms = widths|map(w => { w: w, avif: "avif" ~ w, webp: "webp" ~ w }) %}
+		{% set top = min(asset.width, 3840) %}
+		{% if widths is empty or top > widths|last %}
+			{% set transforms = transforms|merge([{ w: top, avif: "avif3840", webp: "webp3840" }]) %}
+		{% endif %}
+		{% set fallback = transforms|filter(t => t.w <= 1200)|last %}
+
+		<picture class="contents">
+			<source
+				type="image/avif"
+				srcset='{{ transforms|map(t => asset.getUrl(t.avif) ~ " " ~ t.w ~ "w")|join(", ") }}'
+				sizes="{{ sizes }}"
+			>
+			<img
+				src="{{ asset.getUrl(fallback.webp) }}"
+				srcset='{{ transforms|map(t => asset.getUrl(t.webp) ~ " " ~ t.w ~ "w")|join(", ") }}'
+				sizes="{{ sizes }}"
+				width="{{ asset.width }}"
+				height="{{ asset.height }}"
+				alt="{{ alt }}"
+				{{ attr(imgAttr) }}
+				loading='{{ priority ? "eager" : "lazy" }}'
+				fetchpriority='{{ priority ? "high" : "auto" }}'
+			>
+		</picture>
+	{% endif %}
+{% endif %}
