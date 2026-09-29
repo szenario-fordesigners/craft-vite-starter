@@ -67,6 +67,16 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 
 To use Critical CSS, you need to manually add the pages that should be pre-rendered to the `criticalPages` array in `vite.config.ts`. The pages will be pre-rendered when building and the generated CSS will be inlined in the HTML.
 
+### Responsive Images
+
+This starter kit comes with named AVIF and WebP image transforms (`avif480` … `avif3840`, `webp480` … `webp3840`, no upscaling). Render every image through the component, which builds the `srcset` from them:
+
+```twig
+{% include "_includes/components/image.twig" with { asset: entry.image.one(), sizes: "(min-width: 768px) 50vw, 100vw" } only %}
+```
+
+Set `sizes` for any image narrower than the viewport and `priority: true` for the above-the-fold (LCP) images. The other lazy images fade in via [lazyish](https://github.com/smonist/lazyish). All params are documented at the top of `templates/_includes/components/image.twig`. For a lightbox or download link, use the `webp3840` transform.
+
 ## Credits
 
 This repository is based on the official [Craft CMS starter template](https://github.com/craftcms/craft).  
