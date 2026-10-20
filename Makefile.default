@@ -23,6 +23,3 @@ share: up
 	@trap 'ddev exec pkill -f vite >/dev/null 2>&1' EXIT; \
 	ddev yarn dev & \
 	ddev share
-%:
-	@:
-# ref: https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line

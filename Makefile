@@ -19,12 +19,9 @@ install:
 	mv .env.example.dev .env
 	ddev restart
 	ddev yarn install
-	ddev craft setup/app-id \
-		$(filter-out $@,$(MAKECMDGOALS))
-	ddev craft setup/security-key \
-		$(filter-out $@,$(MAKECMDGOALS))
-	ddev craft install \
-		$(filter-out $@,$(MAKECMDGOALS))
+	ddev craft setup/app-id
+	ddev craft setup/security-key
+	ddev craft install
 	ddev craft plugin/install vite
 	ddev craft plugin/install ckeditor
 	@echo "adding image transforms..."
@@ -40,6 +37,3 @@ up:
 	if [ ! "$$(ddev describe | grep OK)" ]; then \
 		ddev start; \
     fi
-%:
-	@:
-# ref: https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line
