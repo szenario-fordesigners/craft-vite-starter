@@ -25,11 +25,11 @@
 	},
 	"homepage": "https://github.com/szenario-fordesigners/craft-vite-starter/#readme",
 	"devDependencies": {
-		"@types/node": "26.6.5",
+		"@types/node": "26.6.6",
 		"@tailwindcss/vite": "4.3.3",
 		"@destination/prettier-plugin-twig": "3.1.0",
 		"prettier": "3.9.10",
-		"sass-embedded": "1.106.1",
+		"sass-embedded": "1.107.1",
 		"tailwindcss": "4.3.3",
 		"typescript": "7.0.2",
 		"vite": "8.3.5",
